@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mok Nai | Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#0b1220;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+.nav-wrapper{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111a2e;
+  padding:10px;
+  border-radius:40px;
+  z-index:1000;
+}
+
+.nav{
+  display:flex;
+  gap:10px;
+}
+
+.nav a{
+  text-decoration:none;
+  padding:10px 18px;
+  border-radius:30px;
+  color:#ccc;
+}
+
+.nav a:hover{
+  background:#4da6ff;
+  color:#000;
+}
+
+/* HERO */
+.hero{
+  min-height:60vh;
+  background:linear-gradient(135deg,#050a1a,#0b1a33);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid #4da6ff;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:46px;
+}
+
+.hero h1 span{
+  color:#4da6ff;
+}
+
+/* SECTION */
+section{
+  padding:100px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+/* ABOUT */
+.about-img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  border:4px solid #4da6ff;
+  margin:30px auto;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  color:#111;
+  border-radius:14px;
+  padding:25px;
+  margin:30px auto;
+  max-width:650px;
+}
+
+/* PROJECT */
+.project-card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  background:#4da6ff;
+  color:#000;
+  padding:8px 14px;
+  border-radius:20px;
+  margin:6px;
+}
+
+/* TIMELINE */
+.timeline{
+  position:relative;
+  max-width:700px;
+  margin:60px auto;
+  text-align:left;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:20px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:#4da6ff;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:40px;
+  padding-left:60px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:11px;
+  top:8px;
+  width:18px;
+  height:18px;
+  background:#4da6ff;
+  border-radius:50%;
+}
+
+.timeline-card{
+  background:#111a2e;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* CONTACT FORM */
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+form button{
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#4da6ff;
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+form button:hover{
+  opacity:.85;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#050a1a;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav-wrapper">
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div id="home" class="hero">
+  <div>
+    <img src="../portfolio/photo_2025-12-25_10-08-58.jpg" class="avatar">
+    <h1>Hi, I'm <span>Mok Nai</span></h1>
+    <p id="typingText"></p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <img src="../portfolio/photo_2025-12-25_10-08-58.jpg" class="about-img">
+  <p>
+     I am a student who is studying and practicing web development.
+      I enjoy learning new technologies and building simple, clean,
+      and user-friendly websites. I am motivated to improve my skills
+      and gain real-world experience as a future web developer.
+  </p>
+</section>
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card project-card">
+    <img src="../portfolio/photo-1571171637578-41bc2dd41cd2.avif" class="about-img">
+    <h3>Personal Portfolio</h3>
+    <p>Modern portfolio website using HTML, CSS, JavaScript</p>
+  </div>
+
+  <div class="card project-card">
+    <img src="../portfolio/premium_vector-1682310918818-6e9a96a3ca2e.avif" class="about-img">
+    <h3>Student Management System</h3>
+    <p>CRUD web application for managing student data</p>
+  </div>
+
+  <div class="card project-card">
+    <img src="../portfolio/art-attack-ctSEl4PFLY4-unsplash.jpg" class="about-img">
+    <h3>Business Landing Page</h3>
+    <p>Clean landing page for startups and small businesses</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>TailwindCSS</span>
+    <span>Prisma</span>
+    <span>TypeScript</span>
+    <span>PostgreSQL</span>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <h3>IT Support</h3>
+        <small>Metfone | 2024 – 2025</small>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <h3>Developer Internship</h3>
+        <small>Techo Startup Center</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="card">
+    <form id="contactForm">
+      <input type="text" name="from_name" placeholder="Your Name" required>
+      <input type="email" name="from_email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="status"></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Mok Nai | Web Developer
+</footer>
+
+<!-- Typing Effect -->
+<script>
+const text = "Web Developer • Always Learning • Always Building";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.getElementById("typingText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing,50);
+  }
+}
+typing();
+</script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY"); 
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",    
+    "YOUR_TEMPLATE_ID",  
+    this
+  ).then(
+    function(){
+      document.getElementById("status").innerHTML = "✅ Message sent successfully!";
+      document.getElementById("contactForm").reset();
+    },
+    function(){
+      document.getElementById("status").innerHTML = "❌ Failed to send message.";
+    }
+  );
+});
+</script>
+
+</body>
+</html>
